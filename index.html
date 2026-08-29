@@ -1,237 +1,241 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>PAUL DISTRIBUTION | Sylhet</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: #f5f7fa;
-            color: #222;
-        }
-
-        header {
-            background: #0b7a3b;
-            color: white;
-            text-align: center;
-            padding: 35px 15px;
-        }
-
-        header h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 17px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 25px 15px;
-        }
-
-        .section {
-            background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 15px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
-
-        h2 {
-            color: #0b7a3b;
-            margin-bottom: 15px;
-        }
-
-        .products {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .product {
-            background: #f0f8f3;
-            padding: 18px;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .companies {
-            line-height: 2;
-            font-size: 17px;
-        }
-
-        .areas {
-            line-height: 2;
-            font-size: 17px;
-        }
-
-        .contact {
-            text-align: center;
-        }
-
-        .phone {
-            display: block;
-            background: #0b7a3b;
-            color: white;
-            text-decoration: none;
-            padding: 13px;
-            margin: 10px auto;
-            max-width: 300px;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-        .order-btn {
-            display: block;
-            background: #25D366;
-            color: white;
-            text-decoration: none;
-            padding: 15px;
-            margin: 20px auto 0;
-            max-width: 350px;
-            border-radius: 8px;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 26px;
-            }
-
-            .products {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAUL DISTRIBUTION | Sylhet</title>
+<meta name="description" content="PAUL DISTRIBUTION — Chips, Biscuit, Drinks, Chocolates, Tissue ও অন্যান্য পণ্যের স্থানীয় সরবরাহকারী।">
+<style>
+:root{
+  --yellow:#f5c400;
+  --black:#111318;
+  --dark:#191c22;
+  --light:#f7f7f5;
+  --muted:#6b7078;
+  --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,"Noto Sans Bengali",sans-serif;
+  background:var(--light);color:var(--black);line-height:1.6;
+}
+.container{width:min(1100px,92%);margin:auto}
+header{
+  background:#fff;border-bottom:1px solid #e7e7e7;
+  position:sticky;top:0;z-index:20;
+}
+.nav{
+  min-height:76px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px;
+}
+.nav-logo{height:58px;width:auto;object-fit:contain}
+.nav a{
+  text-decoration:none;color:#222;font-weight:700;margin-left:18px;
+}
+.hero{
+  background:linear-gradient(135deg,#111318 0%,#242830 100%);
+  color:#fff;padding:70px 0 65px;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;
+}
+.badge{
+  display:inline-block;background:var(--yellow);color:#111;
+  padding:6px 13px;border-radius:999px;font-weight:800;font-size:13px;
+  margin-bottom:15px;
+}
+.hero h1{font-size:clamp(38px,6vw,66px);line-height:1.05;margin-bottom:18px}
+.hero h1 span{color:var(--yellow)}
+.hero p{color:#d7d9de;font-size:18px;max-width:620px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+.btn{
+  display:inline-block;padding:13px 19px;border-radius:10px;
+  text-decoration:none;font-weight:800;
+}
+.btn-primary{background:var(--yellow);color:#111}
+.btn-outline{border:1px solid #777;color:#fff}
+.hero-logo{
+  background:#fff;border-radius:22px;padding:22px;
+  box-shadow:0 20px 60px rgba(0,0,0,.28);
+}
+.hero-logo img{display:block;width:100%;height:auto}
+section{padding:65px 0}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title h2{font-size:34px;margin-bottom:8px}
+.section-title p{color:var(--muted)}
+.cards{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+}
+.card{
+  background:#fff;border:1px solid #e9e9e9;border-radius:16px;
+  padding:25px;box-shadow:0 7px 25px rgba(0,0,0,.05);
+}
+.card h3{margin-bottom:8px}
+.card p{color:var(--muted)}
+.product-grid{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:14px;
+}
+.product{
+  background:#fff;border-radius:14px;padding:24px 10px;text-align:center;
+  border:1px solid #e9e9e9;font-weight:800;
+}
+.icon{font-size:30px;display:block;margin-bottom:8px}
+.brands{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:10px;
+}
+.brand{
+  background:#111318;color:#fff;padding:10px 18px;border-radius:999px;
+  font-weight:700;
+}
+.area-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+}
+.area{
+  background:#fff;border:1px solid #e9e9e9;border-radius:12px;
+  padding:15px;font-weight:700;
+}
+.order{
+  background:#111318;color:#fff;border-radius:22px;padding:45px;
+  text-align:center;
+}
+.order h2{font-size:34px;margin-bottom:10px}
+.order p{color:#d0d2d7}
+footer{
+  background:#0c0d10;color:#bfc2c8;padding:28px 0;text-align:center;
+}
+footer strong{color:#fff}
+@media(max-width:800px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-logo{max-width:480px;margin:auto}
+  .cards{grid-template-columns:1fr}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .area-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-links{display:none}
+}
+@media(max-width:480px){
+  .hero{padding:48px 0}
+  section{padding:48px 0}
+  .product-grid{grid-template-columns:1fr 1fr}
+  .area-grid{grid-template-columns:1fr}
+  .order{padding:32px 20px}
+}
+</style>
 </head>
-
 <body>
 
 <header>
-    <h1>PAUL DISTRIBUTION</h1>
-    <p>আপনার বিশ্বস্ত পণ্য সরবরাহকারী</p>
-    <p>Masukbazar, Kamalbazar, Sylhet</p>
+  <div class="container nav">
+    <a href="#"><img class="nav-logo" src="logo.png" alt="PAUL DISTRIBUTION logo"></a>
+    <nav class="nav-links">
+      <a href="#products">পণ্য</a>
+      <a href="#areas">Delivery Area</a>
+      <a href="#contact">যোগাযোগ</a>
+    </nav>
+  </div>
 </header>
 
-
-<div class="container">
-
-    <div class="section">
-        <h2>🏢 আমাদের সম্পর্কে</h2>
-
-        <p>
-            PAUL DISTRIBUTION হলো Sylhet-এর একটি স্থানীয়
-            Distribution Business। আমরা বিভিন্ন ধরনের
-            Chips, Biscuit, Drinks, Chocolates, Tissue এবং
-            অন্যান্য FMCG পণ্য দোকানে দোকানে সরবরাহ করি।
-        </p>
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">SYLHET • DISTRIBUTION</div>
+      <h1>PAUL <span>DISTRIBUTION</span></h1>
+      <p>দোকানের জন্য প্রয়োজনীয় Chips, Biscuit, Drinks, Chocolates, Tissue ও অন্যান্য পণ্য নির্ভরযোগ্যভাবে সরবরাহ করি।</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://wa.me/8801850300657?text=Assalamu%20Alaikum%2C%20ami%20PAUL%20DISTRIBUTION%20theke%20product%20order%20korte%20chai.">WhatsApp-এ অর্ডার</a>
+        <a class="btn btn-outline" href="tel:01850300657">📞 কল করুন</a>
+      </div>
     </div>
-
-
-    <div class="section">
-        <h2>🏷️ আমাদের কোম্পানি</h2>
-
-        <div class="companies">
-            • PRAN<br>
-            • Gold Mark<br>
-            • East Baker<br>
-            • Janani<br>
-            • এবং অন্যান্য ব্র্যান্ড
-        </div>
+    <div class="hero-logo">
+      <img src="logo.png" alt="PAUL DISTRIBUTION">
     </div>
+  </div>
+</section>
 
-
-    <div class="section">
-        <h2>📦 আমাদের পণ্য</h2>
-
-        <div class="products">
-
-            <div class="product">🍟 Chips</div>
-
-            <div class="product">🍪 Biscuit</div>
-
-            <div class="product">🥤 Drinks</div>
-
-            <div class="product">🍫 Chocolates</div>
-
-            <div class="product">🧻 Tissue</div>
-
-            <div class="product">📦 অন্যান্য পণ্য</div>
-
-        </div>
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>কেন PAUL DISTRIBUTION?</h2>
+      <p>স্থানীয় দোকানের জন্য নিয়মিত পণ্য সরবরাহের সহজ সমাধান</p>
     </div>
-
-
-    <div class="section">
-        <h2>📍 আমাদের Delivery Area</h2>
-
-        <div class="areas">
-            • পনাউল্লা<br>
-            • খাজাঞ্চি<br>
-            • বাছিরপুর<br>
-            • হাজরাই<br>
-            • মুফতিবাজার<br>
-            • আউশা
-        </div>
+    <div class="cards">
+      <div class="card"><h3>📦 বিভিন্ন পণ্য</h3><p>Chips, Biscuit, Drinks, Chocolates, Tissue ও অন্যান্য পণ্য।</p></div>
+      <div class="card"><h3>🚚 স্থানীয় Delivery</h3><p>নির্ধারিত এলাকার দোকানগুলোতে পণ্য সরবরাহের সুবিধা।</p></div>
+      <div class="card"><h3>📱 সহজ অর্ডার</h3><p>ফোন বা WhatsApp-এর মাধ্যমে অর্ডারের জন্য যোগাযোগ করতে পারবেন।</p></div>
     </div>
+  </div>
+</section>
 
-
-    <div class="section contact">
-
-        <h2>📞 যোগাযোগ করুন</h2>
-
-        <a class="phone" href="tel:01850300657">
-            01850300657
-        </a>
-
-        <a class="phone" href="tel:01775495085">
-            01775495085
-        </a>
-
-        <a class="phone" href="tel:01772954542">
-            01772954542
-        </a>
-
-
-        <a class="order-btn"
-           href="https://wa.me/8801850300657?text=Assalamu%20Alaikum%2C%20ami%20PAUL%20DISTRIBUTION%20theke%20product%20order%20korte%20chai.">
-
-            📱 WhatsApp-এ অর্ডার করুন
-        </a>
-
+<section id="products">
+  <div class="container">
+    <div class="section-title">
+      <h2>আমাদের পণ্য</h2>
+      <p>বর্তমানে সরবরাহ করা প্রধান product categories</p>
     </div>
+    <div class="product-grid">
+      <div class="product"><span class="icon">🍟</span>Chips</div>
+      <div class="product"><span class="icon">🍪</span>Biscuit</div>
+      <div class="product"><span class="icon">🥤</span>Drinks</div>
+      <div class="product"><span class="icon">🍫</span>Chocolates</div>
+      <div class="product"><span class="icon">🧻</span>Tissue</div>
+    </div>
+  </div>
+</section>
 
-</div>
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>আমাদের ব্র্যান্ড</h2>
+      <p>আপনাদের দেওয়া তথ্য অনুযায়ী</p>
+    </div>
+    <div class="brands">
+      <span class="brand">PRAN</span>
+      <span class="brand">Gold Mark</span>
+      <span class="brand">East Baker</span>
+      <span class="brand">Janani</span>
+      <span class="brand">অন্যান্য</span>
+    </div>
+  </div>
+</section>
 
+<section id="areas">
+  <div class="container">
+    <div class="section-title">
+      <h2>Delivery Area</h2>
+      <p>বর্তমান সরবরাহের এলাকা</p>
+    </div>
+    <div class="area-grid">
+      <div class="area">📍 পনাউল্লা</div>
+      <div class="area">📍 খাজাঞ্চি</div>
+      <div class="area">📍 বাছিরপুর</div>
+      <div class="area">📍 হাজরাই</div>
+      <div class="area">📍 মুফতিবাজার</div>
+      <div class="area">📍 আউশা</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="order">
+      <h2>দোকানের জন্য অর্ডার করতে চান?</h2>
+      <p>WhatsApp অথবা ফোনে আমাদের সাথে যোগাযোগ করুন।</p>
+      <div class="actions" style="justify-content:center">
+        <a class="btn btn-primary" href="https://wa.me/8801850300657?text=Assalamu%20Alaikum%2C%20ami%20PAUL%20DISTRIBUTION%20theke%20product%20order%20korte%20chai.">📱 WhatsApp Order</a>
+        <a class="btn btn-outline" href="tel:01850300657">01850300657</a>
+      </div>
+      <p style="margin-top:18px">01850300657 • 01775495085 • 01772954542</p>
+      <p>Masukbazar, Kamalbazar, Sylhet</p>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer>
-    <p>© 2026 PAUL DISTRIBUTION</p>
-    <p>Masukbazar, Kamalbazar, Sylhet</p>
+  <p><strong>PAUL DISTRIBUTION</strong></p>
+  <p>Masukbazar, Kamalbazar, Sylhet</p>
+  <p>© 2026 PAUL DISTRIBUTION. All rights reserved.</p>
 </footer>
-
 </body>
-  </html>
+</html>
