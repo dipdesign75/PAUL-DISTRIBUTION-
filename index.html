@@ -4,261 +4,85 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PAUL DISTRIBUTION | Sylhet</title>
-<meta name="description" content="PAUL DISTRIBUTION — Chips, Biscuit, Drinks, Chocolates, Tissue ও অন্যান্য পণ্যের স্থানীয় সরবরাহকারী।">
+<meta name="description" content="PAUL DISTRIBUTION — Sylhet-এর স্থানীয় FMCG পণ্য সরবরাহকারী।">
 <style>
-:root{
-  --yellow:#f5c400;
-  --black:#111318;
-  --dark:#191c22;
-  --light:#f7f7f5;
-  --muted:#6b7078;
-  --white:#fff;
-}
+:root{--yellow:#f5c400;--black:#101216;--dark:#191c22;--light:#f7f7f5;--white:#fff;--muted:#6c7179}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  font-family:Arial,"Noto Sans Bengali",sans-serif;
-  background:var(--light);color:var(--black);line-height:1.6;
-}
+body{font-family:Arial,"Noto Sans Bengali",sans-serif;background:var(--light);color:var(--black);line-height:1.6;overflow-x:hidden}
 .container{width:min(1100px,92%);margin:auto}
-header{
-  background:#fff;border-bottom:1px solid #e7e7e7;
-  position:sticky;top:0;z-index:20;
-}
-.nav{
-  min-height:76px;display:flex;align-items:center;
-  justify-content:space-between;gap:20px;
-}
+header{background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e8e8e8;position:sticky;top:0;z-index:100}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{height:58px;width:auto;object-fit:contain}
-.nav a{
-  text-decoration:none;color:#222;font-weight:700;margin-left:18px;
-}
-.hero{
-  background:linear-gradient(135deg,#111318 0%,#242830 100%);
-  color:#fff;padding:70px 0 65px;
-}
-.hero-grid{
-  display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;
-}
-.badge{
-  display:inline-block;background:var(--yellow);color:#111;
-  padding:6px 13px;border-radius:999px;font-weight:800;font-size:13px;
-  margin-bottom:15px;
-}
-.hero h1{font-size:clamp(38px,6vw,66px);line-height:1.05;margin-bottom:18px}
+.nav-links a{text-decoration:none;color:#222;font-weight:700;margin-left:20px;transition:.25s}
+.nav-links a:hover{color:#c59a00}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#101216,#292e36);color:#fff;padding:78px 0 70px}
+.hero:before{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(245,196,0,.16);border-radius:50%;right:-130px;top:-170px;animation:float 7s ease-in-out infinite}
+.hero:after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(255,255,255,.08);border-radius:50%;left:-120px;bottom:-150px;animation:float 9s ease-in-out infinite reverse}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+.hero-content{animation:fadeUp .8s ease both}
+.badge{display:inline-block;background:var(--yellow);color:#111;padding:6px 13px;border-radius:999px;font-weight:800;font-size:13px;margin-bottom:17px}
+.hero h1{font-size:clamp(40px,6vw,68px);line-height:1.02;margin-bottom:18px;animation:fadeUp .8s .15s ease both}
 .hero h1 span{color:var(--yellow)}
-.hero p{color:#d7d9de;font-size:18px;max-width:620px}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
-.btn{
-  display:inline-block;padding:13px 19px;border-radius:10px;
-  text-decoration:none;font-weight:800;
-}
+.hero p{color:#d8dae0;font-size:18px;max-width:620px;animation:fadeUp .8s .25s ease both}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:800;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.18)}
 .btn-primary{background:var(--yellow);color:#111}
-.btn-outline{border:1px solid #777;color:#fff}
-.hero-logo{
-  background:#fff;border-radius:22px;padding:22px;
-  box-shadow:0 20px 60px rgba(0,0,0,.28);
-}
+.btn-outline{border:1px solid #737983;color:#fff}
+.hero-logo{background:#fff;border-radius:24px;padding:22px;box-shadow:0 25px 70px rgba(0,0,0,.3);animation:logoIn 1s .2s ease both;transition:transform .35s}
+.hero-logo:hover{transform:translateY(-6px) rotate(.4deg)}
 .hero-logo img{display:block;width:100%;height:auto}
-section{padding:65px 0}
-.section-title{text-align:center;margin-bottom:35px}
-.section-title h2{font-size:34px;margin-bottom:8px}
-.section-title p{color:var(--muted)}
-.cards{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
-}
-.card{
-  background:#fff;border:1px solid #e9e9e9;border-radius:16px;
-  padding:25px;box-shadow:0 7px 25px rgba(0,0,0,.05);
-}
-.card h3{margin-bottom:8px}
-.card p{color:var(--muted)}
-.product-grid{
-  display:grid;grid-template-columns:repeat(5,1fr);gap:14px;
-}
-.product{
-  background:#fff;border-radius:14px;padding:24px 10px;text-align:center;
-  border:1px solid #e9e9e9;font-weight:800;
-}
+section{padding:68px 0}
+.section-title{text-align:center;margin-bottom:36px}
+.section-title h2{font-size:34px;margin-bottom:7px}.section-title p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid #e9e9e9;border-radius:17px;padding:26px;box-shadow:0 8px 28px rgba(0,0,0,.05);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-7px);box-shadow:0 18px 38px rgba(0,0,0,.1)}
+.card h3{margin-bottom:8px}.card p{color:var(--muted)}
+.brand-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.brand{position:relative;overflow:hidden;background:#111318;color:#fff;border-radius:16px;padding:25px 15px;text-align:center;font-size:19px;font-weight:800;text-decoration:none;transition:transform .3s,background .3s}
+.brand:after{content:"";position:absolute;left:-80%;top:0;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.14),transparent);transform:skewX(-20deg);transition:left .6s}
+.brand:hover{transform:translateY(-6px);background:#20242b}.brand:hover:after{left:140%}
+.product-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.product{background:#fff;border-radius:14px;padding:24px 10px;text-align:center;border:1px solid #e9e9e9;font-weight:800;transition:transform .3s,box-shadow .3s}
+.product:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(0,0,0,.09)}
 .icon{font-size:30px;display:block;margin-bottom:8px}
-.brands{
-  display:flex;flex-wrap:wrap;justify-content:center;gap:10px;
-}
-.brand{
-  background:#111318;color:#fff;padding:10px 18px;border-radius:999px;
-  font-weight:700;
-}
-.area-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
-}
-.area{
-  background:#fff;border:1px solid #e9e9e9;border-radius:12px;
-  padding:15px;font-weight:700;
-}
-.order{
-  background:#111318;color:#fff;border-radius:22px;padding:45px;
-  text-align:center;
-}
-.order h2{font-size:34px;margin-bottom:10px}
-.order p{color:#d0d2d7}
-footer{
-  background:#0c0d10;color:#bfc2c8;padding:28px 0;text-align:center;
-}
-footer strong{color:#fff}
-@media(max-width:800px){
-  .hero-grid{grid-template-columns:1fr}
-  .hero-logo{max-width:480px;margin:auto}
-  .cards{grid-template-columns:1fr}
-  .product-grid{grid-template-columns:repeat(2,1fr)}
-  .area-grid{grid-template-columns:repeat(2,1fr)}
-  .nav-links{display:none}
-}
-@media(max-width:480px){
-  .hero{padding:48px 0}
-  section{padding:48px 0}
-  .product-grid{grid-template-columns:1fr 1fr}
-  .area-grid{grid-template-columns:1fr}
-  .order{padding:32px 20px}
-}
+.area-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.area{background:#fff;border:1px solid #e9e9e9;border-radius:12px;padding:15px;font-weight:700;transition:transform .25s}
+.area:hover{transform:translateX(5px)}
+.location{background:#111318;color:#fff;border-radius:22px;padding:45px;text-align:center}
+.location h2{font-size:34px;margin-bottom:8px}.location p{color:#d0d2d7}
+footer{background:#0c0d10;color:#bfc2c8;padding:28px 0;text-align:center}footer strong{color:#fff}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:translateY(0)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes logoIn{from{opacity:0;transform:translateX(35px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes float{50%{transform:translateY(18px) rotate(8deg)}}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.hero-logo{max-width:470px;margin:auto}.cards{grid-template-columns:1fr}.brand-grid{grid-template-columns:repeat(2,1fr)}.product-grid{grid-template-columns:repeat(2,1fr)}.area-grid{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}}
+@media(max-width:480px){.hero{padding:52px 0}.hero h1{font-size:42px}section{padding:50px 0}.brand-grid,.area-grid{grid-template-columns:1fr 1fr}.location{padding:32px 20px}.location h2{font-size:28px}}
 </style>
 </head>
 <body>
-
-<header>
-  <div class="container nav">
-    <a href="#"><img class="nav-logo" src="logo.png" alt="PAUL DISTRIBUTION logo"></a>
-    <nav class="nav-links">
-      <a href="#products">পণ্য</a>
-      <a href="#areas">Delivery Area</a>
-      <a href="#contact">যোগাযোগ</a>
-    </nav>
-  </div>
-</header>
-
+<header><div class="container nav"><a href="#"><img class="nav-logo" src="logo.png" alt="PAUL DISTRIBUTION logo"></a><nav class="nav-links"><a href="#brands">Brands</a><a href="#products">পণ্য</a><a href="#areas">Delivery Area</a><a href="#location">Location</a><a href="#contact">যোগাযোগ</a></nav></div></header>
 <main>
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="badge">SYLHET • DISTRIBUTION</div>
-      <h1>PAUL <span>DISTRIBUTION</span></h1>
-      <p>দোকানের জন্য প্রয়োজনীয় Chips, Biscuit, Drinks, Chocolates, Tissue ও অন্যান্য পণ্য নির্ভরযোগ্যভাবে সরবরাহ করি।</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://wa.me/8801850300657?text=Assalamu%20Alaikum%2C%20ami%20PAUL%20DISTRIBUTION%20theke%20product%20order%20korte%20chai.">WhatsApp-এ অর্ডার</a>
-        <a class="btn btn-outline" href="tel:01850300657">📞 কল করুন</a>
-      </div>
-    </div>
-    <div class="hero-logo">
-      <img src="logo.png" alt="PAUL DISTRIBUTION">
-    </div>
-  </div>
-</section>
+<section class="hero"><div class="container hero-grid"><div class="hero-content"><div class="badge">SYLHET • DISTRIBUTION</div><h1>PAUL <span>DISTRIBUTION</span></h1><p>দোকানের জন্য প্রয়োজনীয় Chips, Biscuit, Drinks, Chocolates, Tissue ও অন্যান্য পণ্য নির্ভরযোগ্যভাবে সরবরাহ করি।</p><div class="actions"><a class="btn btn-primary" href="https://wa.me/8801850300657?text=Assalamu%20Alaikum%2C%20ami%20PAUL%20DISTRIBUTION%20theke%20product%20order%20korte%20chai.">WhatsApp-এ অর্ডার</a><a class="btn btn-outline" href="tel:01850300657">📞 কল করুন</a></div></div><div class="hero-logo"><img src="logo.png" alt="PAUL DISTRIBUTION"></div></div></section>
 
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>কেন PAUL DISTRIBUTION?</h2>
-      <p>স্থানীয় দোকানের জন্য নিয়মিত পণ্য সরবরাহের সহজ সমাধান</p>
-    </div>
-    <div class="cards">
-      <div class="card"><h3>📦 বিভিন্ন পণ্য</h3><p>Chips, Biscuit, Drinks, Chocolates, Tissue ও অন্যান্য পণ্য।</p></div>
-      <div class="card"><h3>🚚 স্থানীয় Delivery</h3><p>নির্ধারিত এলাকার দোকানগুলোতে পণ্য সরবরাহের সুবিধা।</p></div>
-      <div class="card"><h3>📱 সহজ অর্ডার</h3><p>ফোন বা WhatsApp-এর মাধ্যমে অর্ডারের জন্য যোগাযোগ করতে পারবেন।</p></div>
-    </div>
-  </div>
-</section>
+<section class="reveal"><div class="container"><div class="section-title"><h2>কেন PAUL DISTRIBUTION?</h2><p>স্থানীয় দোকানের জন্য নিয়মিত পণ্য সরবরাহের সহজ সমাধান</p></div><div class="cards"><div class="card"><h3>📦 বিভিন্ন পণ্য</h3><p>Chips, Biscuit, Drinks, Chocolates, Tissue ও অন্যান্য পণ্য।</p></div><div class="card"><h3>🚚 স্থানীয় Delivery</h3><p>নির্ধারিত এলাকার দোকানগুলোতে পণ্য সরবরাহের সুবিধা।</p></div><div class="card"><h3>📱 সহজ অর্ডার</h3><p>ফোন বা WhatsApp-এর মাধ্যমে অর্ডারের জন্য যোগাযোগ করতে পারবেন।</p></div></div></div></section>
 
-<section id="products">
-  <div class="container">
-    <div class="section-title">
-      <h2>আমাদের পণ্য</h2>
-      <p>বর্তমানে সরবরাহ করা প্রধান product categories</p>
-    </div>
-    <div class="product-grid">
-      <div class="product"><span class="icon">🍟</span>Chips</div>
-      <div class="product"><span class="icon">🍪</span>Biscuit</div>
-      <div class="product"><span class="icon">🥤</span>Drinks</div>
-      <div class="product"><span class="icon">🍫</span>Chocolates</div>
-      <div class="product"><span class="icon">🧻</span>Tissue</div>
-    </div>
-  </div>
-</section>
+<section id="brands" class="reveal"><div class="container"><div class="section-title"><h2>আমাদের Brands</h2><p>Brand নির্বাচন করে পরবর্তীতে তাদের available products দেখা যাবে</p></div><div class="brand-grid"><a class="brand" href="#products">PRAN</a><a class="brand" href="#products">Gold Mark</a><a class="brand" href="#products">East Baker</a><a class="brand" href="#products">Janani</a></div></div></section>
 
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>আমাদের ব্র্যান্ড</h2>
-      <p>আপনাদের দেওয়া তথ্য অনুযায়ী</p>
-    </div>
-    <div class="brands">
-      <span class="brand">PRAN</span>
-      <span class="brand">Gold Mark</span>
-      <span class="brand">East Baker</span>
-      <span class="brand">Janani</span>
-      <span class="brand">অন্যান্য</span>
-    </div>
-  </div>
-</section>
-</section>
+<section id="products" class="reveal"><div class="container"><div class="section-title"><h2>আমাদের পণ্য</h2><p>বর্তমানে সরবরাহ করা প্রধান product categories</p></div><div class="product-grid"><div class="product"><span class="icon">🍟</span>Chips</div><div class="product"><span class="icon">🍪</span>Biscuit</div><div class="product"><span class="icon">🥤</span>Drinks</div><div class="product"><span class="icon">🍫</span>Chocolates</div><div class="product"><span class="icon">🧻</span>Tissue</div></div></div></section>
 
-<section id="location">
-  <div class="container">
-    <div class="section-title">
-      <h2>📍 আমাদের Location</h2>
-      <p>PAUL DISTRIBUTION, Masukbazar, Kamalbazar, Sylhet</p>
-    </div>
+<section id="areas" class="reveal"><div class="container"><div class="section-title"><h2>Delivery Area</h2><p>বর্তমান সরবরাহের এলাকা</p></div><div class="area-grid"><div class="area">📍 পনাউল্লা</div><div class="area">📍 খাজাঞ্চি</div><div class="area">📍 বাছিরপুর</div><div class="area">📍 হাজরাই</div><div class="area">📍 মুফতিবাজার</div><div class="area">📍 আউশা</div></div></div></section>
 
-    <div class="order">
-      <h2>PAUL DISTRIBUTION</h2>
-      <p>Masukbazar, Kamalbazar, Sylhet</p>
+<section id="location" class="reveal"><div class="container"><div class="location"><h2>📍 আমাদের Location</h2><p>Masukbazar, Kamalbazar, Sylhet</p><div class="actions" style="justify-content:center"><a class="btn btn-primary" href="https://maps.app.goo.gl/oVu98X3CgxSVwUp5A" target="_blank">🗺️ Google Maps-এ Location দেখুন</a></div></div></div></section>
 
-      <a class="btn btn-primary"
-         href="https://maps.app.goo.gl/oVu98X3CgxSVwUp5A"
-         target="_blank">
-        🗺️ Google Maps-এ Location দেখুন
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="areas">
-<section id="areas">
-  <div class="container">
-    <div class="section-title">
-      <h2>Delivery Area</h2>
-      <p>বর্তমান সরবরাহের এলাকা</p>
-    </div>
-    <div class="area-grid">
-      <div class="area">📍 পনাউল্লা</div>
-      <div class="area">📍 খাজাঞ্চি</div>
-      <div class="area">📍 বাছিরপুর</div>
-      <div class="area">📍 হাজরাই</div>
-      <div class="area">📍 মুফতিবাজার</div>
-      <div class="area">📍 আউশা</div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container">
-    <div class="order">
-      <h2>দোকানের জন্য অর্ডার করতে চান?</h2>
-      <p>WhatsApp অথবা ফোনে আমাদের সাথে যোগাযোগ করুন।</p>
-      <div class="actions" style="justify-content:center">
-        <a class="btn btn-primary" href="https://wa.me/8801850300657?text=Assalamu%20Alaikum%2C%20ami%20PAUL%20DISTRIBUTION%20theke%20product%20order%20korte%20chai.">📱 WhatsApp Order</a>
-        <a class="btn btn-outline" href="tel:01850300657">01850300657</a>
-      </div>
-      <p style="margin-top:18px">01850300657 • 01775495085 • 01772954542</p>
-      <p>Masukbazar, Kamalbazar, Sylhet</p>
-    </div>
-  </div>
-</section>
+<section id="contact" class="reveal"><div class="container"><div class="location"><h2>দোকানের জন্য অর্ডার করতে চান?</h2><p>WhatsApp অথবা ফোনে আমাদের সাথে যোগাযোগ করুন।</p><div class="actions" style="justify-content:center"><a class="btn btn-primary" href="https://wa.me/8801850300657?text=Assalamu%20Alaikum%2C%20ami%20PAUL%20DISTRIBUTION%20theke%20product%20order%20korte%20chai.">📱 WhatsApp Order</a><a class="btn btn-outline" href="tel:01850300657">01850300657</a></div><p style="margin-top:18px">01850300657 • 01775495085 • 01772954542</p></div></div></section>
 </main>
-
-<footer>
-  <p><strong>PAUL DISTRIBUTION</strong></p>
-  <p>Masukbazar, Kamalbazar, Sylhet</p>
-  <p>© 2026 PAUL DISTRIBUTION. All rights reserved.</p>
-<p>Designed & Developed by <strong>Dip</strong></p>
-</footer>
+<footer><p><strong>PAUL DISTRIBUTION</strong></p><p>Masukbazar, Kamalbazar, Sylhet</p><p>© 2026 PAUL DISTRIBUTION. All rights reserved.</p><p>Designed & Developed by <strong>Dip</strong></p></footer>
+<script>
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")})},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(e=>observer.observe(e));
+</script>
 </body>
 </html>
