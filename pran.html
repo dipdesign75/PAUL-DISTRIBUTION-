@@ -18,45 +18,82 @@ main{width:min(1120px,92%);margin:auto;padding:55px 0 80px}
 .info p{color:var(--muted);font-size:14px;margin-bottom:12px}button{width:100%;padding:11px;border:0;border-radius:10px;background:var(--ink);color:white;font-weight:900}
 button:hover{background:var(--y);color:#111}footer{text-align:center;background:#0b0c0f;color:#aaa;padding:28px}
 @media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.grid{gap:12px}.photo{height:175px}.info{padding:12px}.info h3{font-size:15px}}
+
+.cart-fab{position:fixed;right:20px;bottom:20px;z-index:20;border:0;background:var(--y);color:#111;border-radius:999px;padding:14px 18px;font-weight:900;box-shadow:0 12px 30px rgba(0,0,0,.18);cursor:pointer}
+.cart-count{display:inline-flex;min-width:22px;height:22px;align-items:center;justify-content:center;background:#111;color:#fff;border-radius:99px;margin-left:6px;font-size:12px}
+.cart-panel{position:fixed;right:20px;bottom:78px;width:min(360px,calc(100vw - 40px));max-height:65vh;overflow:auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 20px 55px rgba(0,0,0,.2);z-index:19;display:none}
+.cart-panel.open{display:block}.cart-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.cart-close{border:0;background:#eee;border-radius:8px;padding:7px 10px;cursor:pointer}
+.cart-item{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.cart-item img{width:55px;height:55px;object-fit:contain;background:#f3f3ef;border-radius:8px}
+.cart-item strong{font-size:14px}.qty{margin-left:auto;display:flex;align-items:center;gap:7px}.qty button{width:28px!important;padding:5px!important;border-radius:7px!important}
+.empty-cart{text-align:center;color:var(--muted);padding:18px 0}
 </style></head><body>
 <header><div class="nav"><a href="index.html"><img class="logo" src="logo.png" alt="PAUL DISTRIBUTION"></a><a class="back" href="index.html">← Home</a></div></header>
 <section class="hero"><div class="eyebrow">PAUL DISTRIBUTION • BRAND CATALOG</div><h1>PRAN</h1><p>PRAN-এর available products</p></section>
 <main><div class="grid"><article class="product-card">
 <div class="photo"><img src="IMG-20260830-WA0024.jpg" alt="PRAN Product 1"></div>
 <div class="info"><span>PRAN</span><h3>PRAN Product 1</h3>
-<p>Price: Coming Soon</p><button>🛒 Add to Cart</button></div></article><article class="product-card">
+<p>Price: Coming Soon</p><button data-add="1">🛒 Add to Cart</button></div></article><article class="product-card">
 <div class="photo"><img src="IMG-20260830-WA0025.jpg" alt="PRAN Product 2"></div>
 <div class="info"><span>PRAN</span><h3>PRAN Product 2</h3>
-<p>Price: Coming Soon</p><button>🛒 Add to Cart</button></div></article><article class="product-card">
+<p>Price: Coming Soon</p><button data-add="2">🛒 Add to Cart</button></div></article><article class="product-card">
 <div class="photo"><img src="IMG-20260830-WA0027.jpg" alt="PRAN Product 3"></div>
 <div class="info"><span>PRAN</span><h3>PRAN Product 3</h3>
-<p>Price: Coming Soon</p><button>🛒 Add to Cart</button></div></article><article class="product-card">
+<p>Price: Coming Soon</p><button data-add="3">🛒 Add to Cart</button></div></article><article class="product-card">
 <div class="photo"><img src="IMG-20260830-WA0028.jpg" alt="PRAN Product 4"></div>
 <div class="info"><span>PRAN</span><h3>PRAN Product 4</h3>
-<p>Price: Coming Soon</p><button>🛒 Add to Cart</button></div></article><article class="product-card">
+<p>Price: Coming Soon</p><button data-add="4">🛒 Add to Cart</button></div></article><article class="product-card">
 <div class="photo"><img src="IMG-20260830-WA0029.jpg" alt="PRAN Product 5"></div>
 <div class="info"><span>PRAN</span><h3>PRAN Product 5</h3>
-<p>Price: Coming Soon</p><button>🛒 Add to Cart</button></div></article><article class="product-card">
+<p>Price: Coming Soon</p><button data-add="5">🛒 Add to Cart</button></div></article><article class="product-card">
 <div class="photo"><img src="IMG-20260830-WA0030.jpg" alt="PRAN Product 6"></div>
 <div class="info"><span>PRAN</span><h3>PRAN Product 6</h3>
-<p>Price: Coming Soon</p><button>🛒 Add to Cart</button></div></article><article class="product-card">
+<p>Price: Coming Soon</p><button data-add="6">🛒 Add to Cart</button></div></article><article class="product-card">
 <div class="photo"><img src="IMG-20260830-WA0031.jpg" alt="PRAN Product 7"></div>
 <div class="info"><span>PRAN</span><h3>PRAN Product 7</h3>
-<p>Price: Coming Soon</p><button>🛒 Add to Cart</button></div></article><article class="product-card">
+<p>Price: Coming Soon</p><button data-add="7">🛒 Add to Cart</button></div></article><article class="product-card">
 <div class="photo"><img src="IMG-20260830-WA0032.jpg" alt="PRAN Product 8"></div>
 <div class="info"><span>PRAN</span><h3>PRAN Product 8</h3>
-<p>Price: Coming Soon</p><button>🛒 Add to Cart</button></div></article><article class="product-card">
+<p>Price: Coming Soon</p><button data-add="8">🛒 Add to Cart</button></div></article><article class="product-card">
 <div class="photo"><img src="IMG-20260830-WA0033.jpg" alt="PRAN Product 9"></div>
 <div class="info"><span>PRAN</span><h3>PRAN Product 9</h3>
-<p>Price: Coming Soon</p><button>🛒 Add to Cart</button></div></article><article class="product-card">
+<p>Price: Coming Soon</p><button data-add="9">🛒 Add to Cart</button></div></article><article class="product-card">
 <div class="photo"><img src="IMG-20260830-WA0034.jpg" alt="PRAN Product 10"></div>
 <div class="info"><span>PRAN</span><h3>PRAN Product 10</h3>
-<p>Price: Coming Soon</p><button>🛒 Add to Cart</button></div></article><article class="product-card">
+<p>Price: Coming Soon</p><button data-add="10">🛒 Add to Cart</button></div></article><article class="product-card">
 <div class="photo"><img src="IMG-20260830-WA0035.jpg" alt="PRAN Product 11"></div>
 <div class="info"><span>PRAN</span><h3>PRAN Product 11</h3>
-<p>Price: Coming Soon</p><button>🛒 Add to Cart</button></div></article><article class="product-card">
+<p>Price: Coming Soon</p><button data-add="11">🛒 Add to Cart</button></div></article><article class="product-card">
 <div class="photo"><img src="IMG-20260830-WA0036.jpg" alt="PRAN Product 12"></div>
 <div class="info"><span>PRAN</span><h3>PRAN Product 12</h3>
-<p>Price: Coming Soon</p><button>🛒 Add to Cart</button></div></article></div></main>
+<p>Price: Coming Soon</p><button data-add="12">🛒 Add to Cart</button></div></article></div></main>
 <footer><strong>PAUL DISTRIBUTION</strong><br>Masukbazar, Kamalbazar, Sylhet</footer>
+
+<button class="cart-fab" id="cartFab">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-head"><h2>Your Cart</h2><button class="cart-close" id="cartClose">✕</button></div>
+  <div id="cartItems"><div class="empty-cart">Cart is empty</div></div>
+</div>
+<script>
+const cart=[];
+const names=Array.from({length:12},(_,i)=>`PRAN Product ${i+1}`);
+const imgs=Array.from({length:12},(_,i)=>["IMG-20260830-WA0024.jpg","IMG-20260830-WA0025.jpg","IMG-20260830-WA0027.jpg","IMG-20260830-WA0028.jpg","IMG-20260830-WA0029.jpg","IMG-20260830-WA0030.jpg","IMG-20260830-WA0031.jpg","IMG-20260830-WA0032.jpg","IMG-20260830-WA0033.jpg","IMG-20260830-WA0034.jpg","IMG-20260830-WA0035.jpg","IMG-20260830-WA0036.jpg"][i]);
+const panel=document.getElementById('cartPanel'), count=document.getElementById('cartCount'), items=document.getElementById('cartItems');
+function render(){
+ count.textContent=cart.reduce((s,x)=>s+x.qty,0);
+ if(!cart.length){items.innerHTML='<div class="empty-cart">Cart is empty</div>';return;}
+ items.innerHTML=cart.map((x,i)=>`<div class="cart-item"><img src="${x.img}" alt=""><div><strong>${x.name}</strong><br><small>Price: Coming Soon</small></div><div class="qty"><button onclick="changeQty(${i},-1)">−</button><b>${x.qty}</b><button onclick="changeQty(${i},1)">+</button></div></div>`).join('');
+}
+function add(i){
+ const idx=cart.findIndex(x=>x.id===i);
+ if(idx>-1) cart[idx].qty++; else cart.push({id:i,name:names[i-1],img:imgs[i-1],qty:1});
+ render(); panel.classList.add('open');
+}
+function changeQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);render();}
+document.querySelectorAll('[data-add]').forEach(b=>b.addEventListener('click',()=>add(+b.dataset.add)));
+document.getElementById('cartFab').onclick=()=>panel.classList.toggle('open');
+document.getElementById('cartClose').onclick=()=>panel.classList.remove('open');
+render();
+</script>
 </body></html>
