@@ -47,10 +47,6 @@ button:hover{background:var(--y);color:#111}footer{text-align:center;background:
 <footer><strong>PAUL DISTRIBUTION</strong><br>Masukbazar, Kamalbazar, Sylhet</footer>
 
 <button class="cart-fab" id="cartFab">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
-<div class="cart-panel" id="cartPanel">
-  <div class="cart-head"><h2>Your Cart</h2><button class="cart-close" id="cartClose">✕</button></div>
-  <div id="cartItems"><div class="empty-cart">Cart is empty</div></div>
-</div>
 <script>
 const cart=[];
 const names=Array.from({length:12},(_,i)=>`PRAN Product ${i+1}`);
@@ -59,22 +55,7 @@ const panel=document.getElementById('cartPanel'), count=document.getElementById(
 function render(){
  count.textContent=cart.reduce((s,x)=>s+x.qty,0);
  if(!cart.length){items.innerHTML='<div class="empty-cart">Cart is empty</div>';return;}
- items.innerHTML=cart.map((x,i)=>`<div class="cart-item"><img src="${x.img}" alt=""><div><strong>${x.name}</strong><br><small>Price: Coming Soon</small></div><div class="qty"><button onclick="changeQty(${i},-1)">−</button><b>${x.qty}</b><button onclick="changeQty(${i},1)">+</button></div></div>`).join('');
-}
-function add(i){
- const idx=cart.findIndex(x=>x.id===i);
- if(idx>-1) cart[idx].qty++; else cart.push({id:i,name:names[i-1],img:imgs[i-1],qty:1});
- render(); panel.classList.add('open');
-}
-function changeQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);render();}
-document.querySelectorAll('[data-add]').forEach(b=>b.addEventListener('click',()=>add(+b.dataset.add)));
-document.getElementById('cartFab').onclick=()=>panel.classList.toggle('open');
-document.getElementById('cartClose').onclick=()=>panel.classList.remove('open');
-render();
-</script>
-<button class="cart-fab" id="cartFab">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
-<div class="cart-panel" id="cartPanel"><div class="cart-head"><h2>Carton Cart</h2><button class="cart-close" id="cartClose">✕</button></div><div id="cartItems"><div class="empty-cart">Cart is empty</div></div><div class="cart-total"><span>Grand Total</span><span id="cartTotal">৳0</span></div></div>
-<script>
+ items.innerHTML=cart.map((x,i)=>`<script>
 const products=[('MUGHAL LACCI', 408, 'IMG-20260830-WA0024.jpg'), ('POTATO CRACKER – TOMATO FLAVOUR', 912, 'IMG-20260830-WA0025.jpg'), ('PRAN BADAM BAJA', 2304, 'IMG-20260830-WA0027.jpg'), ('JHAL MURI', 1160, 'IMG-20260830-WA0028.jpg'), ('JHAL CHANACHUR', 3800, 'IMG-20260830-WA0029.jpg'), ('PRAN DAL BAJA', 1600, 'IMG-20260830-WA0030.jpg'), ('ZEROS CHIPS', 960, 'IMG-20260830-WA0031.jpg'), ('POTATO STICKS CHIPS', 960, 'IMG-20260830-WA0032.jpg'), ('HIP HIP CHIPS', 1600, 'IMG-20260830-WA0033.jpg'), ('TWISTER RED CHIPS', 1280, 'IMG-20260830-WA0034.jpg'), ('CHICKEN BITE CHIPS', 912, 'IMG-20260830-WA0035.jpg'), ('TWISTER BLUE CHIPS', 1280, 'IMG-20260830-WA0036.jpg')],cart=[];
 const panel=document.getElementById("cartPanel"),items=document.getElementById("cartItems"),count=document.getElementById("cartCount"),total=document.getElementById("cartTotal");
 const money=n=>"৳"+Number(n).toLocaleString("en-BD",{maximumFractionDigits:2});
