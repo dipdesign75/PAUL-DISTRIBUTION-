@@ -28,46 +28,22 @@ button:hover{background:var(--y);color:#111}footer{text-align:center;background:
 .cart-item img{width:55px;height:55px;object-fit:contain;background:#f3f3ef;border-radius:8px}
 .cart-item strong{font-size:14px}.qty{margin-left:auto;display:flex;align-items:center;gap:7px}.qty button{width:28px!important;padding:5px!important;border-radius:7px!important}
 .empty-cart{text-align:center;color:var(--muted);padding:18px 0}
-</style></head><body>
+</style>
+<style>
+.prices{line-height:1.65;color:var(--muted);font-size:13px;margin:8px 0 12px}.prices strong{color:var(--ink)}
+.add-cart{width:100%;padding:11px;border:0;border-radius:10px;background:var(--ink);color:#fff;font-weight:800;cursor:pointer}
+.cart-fab{position:fixed;right:20px;bottom:20px;z-index:999;border:0;border-radius:999px;padding:14px 18px;background:var(--y);color:#111;font-weight:900;box-shadow:0 12px 30px rgba(0,0,0,.2);cursor:pointer}
+.cart-count{display:inline-flex;min-width:22px;height:22px;align-items:center;justify-content:center;background:#111;color:#fff;border-radius:50%;margin-left:5px;font-size:12px}
+.cart-panel{position:fixed;right:20px;bottom:78px;width:min(400px,calc(100vw - 40px));max-height:70vh;overflow:auto;background:#fff;border-radius:18px;padding:18px;box-shadow:0 20px 55px rgba(0,0,0,.22);z-index:998;display:none;border:1px solid #eee}.cart-panel.open{display:block}
+.cart-head{display:flex;justify-content:space-between;align-items:center}.cart-close{border:0;border-radius:8px;padding:7px 10px;cursor:pointer}
+.cart-item{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;padding:11px 0;border-bottom:1px solid #eee}.cart-item img{width:52px;height:52px;object-fit:contain;border-radius:8px;background:#f4f4f1}
+.qty{display:flex;align-items:center;gap:6px}.qty button{width:29px;height:29px;border:0;border-radius:7px;background:#111;color:#fff;cursor:pointer}
+.cart-total{display:flex;justify-content:space-between;font-weight:900;font-size:18px;padding:15px 0}.empty-cart{text-align:center;color:#777;padding:20px}
+</style>
+</head><body>
 <header><div class="nav"><a href="index.html"><img class="logo" src="logo.png" alt="PAUL DISTRIBUTION"></a><a class="back" href="index.html">← Home</a></div></header>
 <section class="hero"><div class="eyebrow">PAUL DISTRIBUTION • BRAND CATALOG</div><h1>PRAN</h1><p>PRAN-এর available products</p></section>
-<main><div class="grid"><article class="product-card">
-<div class="photo"><img src="IMG-20260830-WA0024.jpg" alt="PRAN Product 1"></div>
-<div class="info"><span>PRAN</span><h3>PRAN Product 1</h3>
-<p>Price: Coming Soon</p><button data-add="1">🛒 Add to Cart</button></div></article><article class="product-card">
-<div class="photo"><img src="IMG-20260830-WA0025.jpg" alt="PRAN Product 2"></div>
-<div class="info"><span>PRAN</span><h3>PRAN Product 2</h3>
-<p>Price: Coming Soon</p><button data-add="2">🛒 Add to Cart</button></div></article><article class="product-card">
-<div class="photo"><img src="IMG-20260830-WA0027.jpg" alt="PRAN Product 3"></div>
-<div class="info"><span>PRAN</span><h3>PRAN Product 3</h3>
-<p>Price: Coming Soon</p><button data-add="3">🛒 Add to Cart</button></div></article><article class="product-card">
-<div class="photo"><img src="IMG-20260830-WA0028.jpg" alt="PRAN Product 4"></div>
-<div class="info"><span>PRAN</span><h3>PRAN Product 4</h3>
-<p>Price: Coming Soon</p><button data-add="4">🛒 Add to Cart</button></div></article><article class="product-card">
-<div class="photo"><img src="IMG-20260830-WA0029.jpg" alt="PRAN Product 5"></div>
-<div class="info"><span>PRAN</span><h3>PRAN Product 5</h3>
-<p>Price: Coming Soon</p><button data-add="5">🛒 Add to Cart</button></div></article><article class="product-card">
-<div class="photo"><img src="IMG-20260830-WA0030.jpg" alt="PRAN Product 6"></div>
-<div class="info"><span>PRAN</span><h3>PRAN Product 6</h3>
-<p>Price: Coming Soon</p><button data-add="6">🛒 Add to Cart</button></div></article><article class="product-card">
-<div class="photo"><img src="IMG-20260830-WA0031.jpg" alt="PRAN Product 7"></div>
-<div class="info"><span>PRAN</span><h3>PRAN Product 7</h3>
-<p>Price: Coming Soon</p><button data-add="7">🛒 Add to Cart</button></div></article><article class="product-card">
-<div class="photo"><img src="IMG-20260830-WA0032.jpg" alt="PRAN Product 8"></div>
-<div class="info"><span>PRAN</span><h3>PRAN Product 8</h3>
-<p>Price: Coming Soon</p><button data-add="8">🛒 Add to Cart</button></div></article><article class="product-card">
-<div class="photo"><img src="IMG-20260830-WA0033.jpg" alt="PRAN Product 9"></div>
-<div class="info"><span>PRAN</span><h3>PRAN Product 9</h3>
-<p>Price: Coming Soon</p><button data-add="9">🛒 Add to Cart</button></div></article><article class="product-card">
-<div class="photo"><img src="IMG-20260830-WA0034.jpg" alt="PRAN Product 10"></div>
-<div class="info"><span>PRAN</span><h3>PRAN Product 10</h3>
-<p>Price: Coming Soon</p><button data-add="10">🛒 Add to Cart</button></div></article><article class="product-card">
-<div class="photo"><img src="IMG-20260830-WA0035.jpg" alt="PRAN Product 11"></div>
-<div class="info"><span>PRAN</span><h3>PRAN Product 11</h3>
-<p>Price: Coming Soon</p><button data-add="11">🛒 Add to Cart</button></div></article><article class="product-card">
-<div class="photo"><img src="IMG-20260830-WA0036.jpg" alt="PRAN Product 12"></div>
-<div class="info"><span>PRAN</span><h3>PRAN Product 12</h3>
-<p>Price: Coming Soon</p><button data-add="12">🛒 Add to Cart</button></div></article></div></main>
+<main><div class="grid"><article class="product-card"><div class="photo"><img src="IMG-20260830-WA0024.jpg" alt="MUGHAL LACCI"></div><div class="info"><span>PRAN</span><h3>MUGHAL LACCI</h3><p class="prices">MRP/Packet: ৳20<br>TP/Packet: ৳17<br><strong>Carton Price: ৳408</strong></p><button class="add-cart" data-add="1">🛒 Add 1 Carton</button></div></article><article class="product-card"><div class="photo"><img src="IMG-20260830-WA0025.jpg" alt="POTATO CRACKER – TOMATO FLAVOUR"></div><div class="info"><span>PRAN</span><h3>POTATO CRACKER – TOMATO FLAVOUR</h3><p class="prices">MRP/Packet: ৳10<br>TP/Packet: ৳7.6<br><strong>Carton Price: ৳912</strong></p><button class="add-cart" data-add="2">🛒 Add 1 Carton</button></div></article><article class="product-card"><div class="photo"><img src="IMG-20260830-WA0027.jpg" alt="PRAN BADAM BAJA"></div><div class="info"><span>PRAN</span><h3>PRAN BADAM BAJA</h3><p class="prices">MRP/Packet: ৳10<br>TP/Packet: ৳8<br><strong>Carton Price: ৳2,304</strong></p><button class="add-cart" data-add="3">🛒 Add 1 Carton</button></div></article><article class="product-card"><div class="photo"><img src="IMG-20260830-WA0028.jpg" alt="JHAL MURI"></div><div class="info"><span>PRAN</span><h3>JHAL MURI</h3><p class="prices">MRP/Packet: ৳10<br>TP/Packet: ৳8<br><strong>Carton Price: ৳1,160</strong></p><button class="add-cart" data-add="4">🛒 Add 1 Carton</button></div></article><article class="product-card"><div class="photo"><img src="IMG-20260830-WA0029.jpg" alt="JHAL CHANACHUR"></div><div class="info"><span>PRAN</span><h3>JHAL CHANACHUR</h3><p class="prices">MRP/Packet: ৳50<br>TP/Packet: ৳38<br><strong>Carton Price: ৳3,800</strong></p><button class="add-cart" data-add="5">🛒 Add 1 Carton</button></div></article><article class="product-card"><div class="photo"><img src="IMG-20260830-WA0030.jpg" alt="PRAN DAL BAJA"></div><div class="info"><span>PRAN</span><h3>PRAN DAL BAJA</h3><p class="prices">MRP/Packet: ৳10<br>TP/Packet: ৳8<br><strong>Carton Price: ৳1,600</strong></p><button class="add-cart" data-add="6">🛒 Add 1 Carton</button></div></article><article class="product-card"><div class="photo"><img src="IMG-20260830-WA0031.jpg" alt="ZEROS CHIPS"></div><div class="info"><span>PRAN</span><h3>ZEROS CHIPS</h3><p class="prices">MRP/Packet: ৳10<br>TP/Packet: ৳8<br><strong>Carton Price: ৳960</strong></p><button class="add-cart" data-add="7">🛒 Add 1 Carton</button></div></article><article class="product-card"><div class="photo"><img src="IMG-20260830-WA0032.jpg" alt="POTATO STICKS CHIPS"></div><div class="info"><span>PRAN</span><h3>POTATO STICKS CHIPS</h3><p class="prices">MRP/Packet: ৳10<br>TP/Packet: ৳8<br><strong>Carton Price: ৳960</strong></p><button class="add-cart" data-add="8">🛒 Add 1 Carton</button></div></article><article class="product-card"><div class="photo"><img src="IMG-20260830-WA0033.jpg" alt="HIP HIP CHIPS"></div><div class="info"><span>PRAN</span><h3>HIP HIP CHIPS</h3><p class="prices">MRP/Packet: ৳10<br>TP/Packet: ৳8<br><strong>Carton Price: ৳1,600</strong></p><button class="add-cart" data-add="9">🛒 Add 1 Carton</button></div></article><article class="product-card"><div class="photo"><img src="IMG-20260830-WA0034.jpg" alt="TWISTER RED CHIPS"></div><div class="info"><span>PRAN</span><h3>TWISTER RED CHIPS</h3><p class="prices">MRP/Packet: ৳20<br>TP/Packet: ৳16<br><strong>Carton Price: ৳1,280</strong></p><button class="add-cart" data-add="10">🛒 Add 1 Carton</button></div></article><article class="product-card"><div class="photo"><img src="IMG-20260830-WA0035.jpg" alt="CHICKEN BITE CHIPS"></div><div class="info"><span>PRAN</span><h3>CHICKEN BITE CHIPS</h3><p class="prices">MRP/Packet: ৳10<br>TP/Packet: ৳7.6<br><strong>Carton Price: ৳912</strong></p><button class="add-cart" data-add="11">🛒 Add 1 Carton</button></div></article><article class="product-card"><div class="photo"><img src="IMG-20260830-WA0036.jpg" alt="TWISTER BLUE CHIPS"></div><div class="info"><span>PRAN</span><h3>TWISTER BLUE CHIPS</h3><p class="prices">MRP/Packet: ৳20<br>TP/Packet: ৳16<br><strong>Carton Price: ৳1,280</strong></p><button class="add-cart" data-add="12">🛒 Add 1 Carton</button></div></article></div></main>
 <footer><strong>PAUL DISTRIBUTION</strong><br>Masukbazar, Kamalbazar, Sylhet</footer>
 
 <button class="cart-fab" id="cartFab">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
@@ -96,4 +72,17 @@ document.getElementById('cartFab').onclick=()=>panel.classList.toggle('open');
 document.getElementById('cartClose').onclick=()=>panel.classList.remove('open');
 render();
 </script>
-</body></html>
+<button class="cart-fab" id="cartFab">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+<div class="cart-panel" id="cartPanel"><div class="cart-head"><h2>Carton Cart</h2><button class="cart-close" id="cartClose">✕</button></div><div id="cartItems"><div class="empty-cart">Cart is empty</div></div><div class="cart-total"><span>Grand Total</span><span id="cartTotal">৳0</span></div></div>
+<script>
+const products=[('MUGHAL LACCI', 408, 'IMG-20260830-WA0024.jpg'), ('POTATO CRACKER – TOMATO FLAVOUR', 912, 'IMG-20260830-WA0025.jpg'), ('PRAN BADAM BAJA', 2304, 'IMG-20260830-WA0027.jpg'), ('JHAL MURI', 1160, 'IMG-20260830-WA0028.jpg'), ('JHAL CHANACHUR', 3800, 'IMG-20260830-WA0029.jpg'), ('PRAN DAL BAJA', 1600, 'IMG-20260830-WA0030.jpg'), ('ZEROS CHIPS', 960, 'IMG-20260830-WA0031.jpg'), ('POTATO STICKS CHIPS', 960, 'IMG-20260830-WA0032.jpg'), ('HIP HIP CHIPS', 1600, 'IMG-20260830-WA0033.jpg'), ('TWISTER RED CHIPS', 1280, 'IMG-20260830-WA0034.jpg'), ('CHICKEN BITE CHIPS', 912, 'IMG-20260830-WA0035.jpg'), ('TWISTER BLUE CHIPS', 1280, 'IMG-20260830-WA0036.jpg')],cart=[];
+const panel=document.getElementById("cartPanel"),items=document.getElementById("cartItems"),count=document.getElementById("cartCount"),total=document.getElementById("cartTotal");
+const money=n=>"৳"+Number(n).toLocaleString("en-BD",{maximumFractionDigits:2});
+function renderCart(){count.textContent=cart.reduce((s,x)=>s+x.qty,0);total.textContent=money(cart.reduce((s,x)=>s+x.qty*x.price,0));if(!cart.length){items.innerHTML='<div class="empty-cart">Cart is empty</div>';return;}items.innerHTML=cart.map((x,i)=>`<div class="cart-item"><img src="${x.img}" alt=""><div><strong>${x.name}</strong><br><small>${money(x.price)} / carton</small></div><div class="qty"><button onclick="changeQty(${i},-1)">−</button><b>${x.qty}</b><button onclick="changeQty(${i},1)">+</button></div></div>`).join("");}
+function addCart(id){const p=products[id-1],i=cart.findIndex(x=>x.id===id);if(i<0)cart.push({id:id,name:p[0],price:p[1],img:p[2],qty:1});else cart[i].qty++;renderCart();panel.classList.add("open");}
+function changeQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);renderCart();}
+document.querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>addCart(Number(b.dataset.add)));
+document.getElementById("cartFab").onclick=()=>panel.classList.toggle("open");
+document.getElementById("cartClose").onclick=()=>panel.classList.remove("open");
+renderCart();
+</script></body></html>
