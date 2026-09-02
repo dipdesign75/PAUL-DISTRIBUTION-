@@ -313,6 +313,1708 @@ footer{
   padding:24px;
 }
 
+/* PLACE ORDER BUTTON */
+
+.place-order-btn{
+  width:100%;
+  margin-top:12px;
+  padding:13px;
+  border:0;
+  border-radius:11px;
+  background:#111;
+  color:white;
+  font-weight:900;
+  font-size:15px;
+  cursor:pointer;
+}
+
+.place-order-btn:hover{
+  background:var(--y);
+  color:#111;
+}
+
+
+/* ORDER MODAL */
+
+.order-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  z-index:10000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:16px;
+}
+
+.order-overlay.open{
+  display:flex;
+}
+
+.order-box{
+  width:min(520px,100%);
+  max-height:90vh;
+  overflow:auto;
+  background:#fff;
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 25px 70px rgba(0,0,0,.35);
+}
+
+.order-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+.order-top h2{
+  font-size:25px;
+}
+
+.order-x{
+  border:0;
+  background:#eee;
+  border-radius:9px;
+  padding:8px 12px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+.order-field{
+  margin-bottom:13px;
+}
+
+.order-field label{
+  display:block;
+  font-weight:900;
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+.order-field input,
+.order-field textarea{
+  width:100%;
+  border:1px solid #ddd;
+  border-radius:10px;
+  padding:12px;
+  font-size:15px;
+  outline:none;
+  font-family:inherit;
+}
+
+.order-field input:focus,
+.order-field textarea:focus{
+  border-color:var(--y);
+}
+
+.order-field textarea{
+  min-height:80px;
+  resize:vertical;
+}
+
+.order-summary{
+  background:#f7f6f2;
+  border-radius:13px;
+  padding:15px;
+  margin:18px 0;
+}
+
+.order-summary h3{
+  margin-bottom:10px;
+}
+
+.summary-product{
+  padding:9px 0;
+  border-bottom:1px solid #ddd;
+  font-size:14px;
+}
+
+.summary-total{
+  display:flex;
+  justify-content:space-between;
+  margin-top:13px;
+  font-size:19px;
+  font-weight:900;
+}
+
+.whatsapp-title{
+  font-weight:900;
+  margin:18px 0 10px;
+}
+
+.whatsapp-btn{
+  width:100%;
+  border:0;
+  border-radius:10px;
+  padding:13px;
+  margin-top:8px;
+  background:#25D366;
+  color:white;
+  font-weight:900;
+  font-size:15px;
+  cursor:pointer;
+}
+
+.whatsapp-btn:hover{
+  background:#1da851;
+}
+
+.order-cancel{
+  width:100%;
+  border:0;
+  border-radius:10px;
+  padding:12px;
+  margin-top:10px;
+  background:#eee;
+  font-weight:900;
+  cursor:pointer;
+}
+
+
+/* MOBILE */
+@media(max-width:800px){
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:480px){
+  .grid{
+    gap:12px;
+  }
+
+  .photo{
+    height:175px;
+  }
+
+  .info{
+    padding:12px;
+  }
+
+  .info h3{
+    font-size:15px;
+  }
+
+  .prices{
+    font-size:13px;
+  }
+
+  .cart-panel{
+    right:12px;
+    bottom:78px;
+    width:calc(100vw - 24px);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav">
+
+    <a href="index.html">
+      <img class="logo" src="logo.png" alt="PAUL DISTRIBUTION">
+    </a>
+
+    <a class="back" href="index.html">
+      ← Home
+    </a>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="eyebrow">
+    PAUL DISTRIBUTION • BRAND CATALOG
+  </div>
+
+  <h1>PRAN</h1>
+
+  <p>
+    PRAN-এর available products
+  </p>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<main>
+
+<div class="grid">
+
+
+<!-- 1 -->
+<article class="product-card">
+
+  <div class="photo">
+    <img src="IMG-20260830-WA0024.jpg"
+         alt="MUGHAL LACCI">
+  </div>
+
+  <div class="info">
+
+    <span>PRAN</span>
+
+    <h3>MUGHAL LACCI</h3>
+
+    <p class="prices">
+      MRP/Packet: ৳20<br>
+      TP/Packet: ৳17<br>
+      <strong>Carton Price: ৳408</strong>
+    </p>
+
+    <button class="add-cart" data-add="1">
+      🛒 Add 1 Carton
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- 2 -->
+<article class="product-card">
+
+  <div class="photo">
+    <img src="IMG-20260830-WA0025.jpg"
+         alt="POTATO CRACKER – TOMATO FLAVOUR">
+  </div>
+
+  <div class="info">
+
+    <span>PRAN</span>
+
+    <h3>POTATO CRACKER – TOMATO FLAVOUR</h3>
+
+    <p class="prices">
+      MRP/Packet: ৳10<br>
+      TP/Packet: ৳7.60<br>
+      <strong>Carton Price: ৳912</strong>
+    </p>
+
+    <button class="add-cart" data-add="2">
+      🛒 Add 1 Carton
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- 3 -->
+<article class="product-card">
+
+  <div class="photo">
+    <img src="IMG-20260830-WA0027.jpg"
+         alt="PRAN BADAM BAJA">
+  </div>
+
+  <div class="info">
+
+    <span>PRAN</span>
+
+    <h3>PRAN BADAM BAJA</h3>
+
+    <p class="prices">
+      MRP/Packet: ৳10<br>
+      TP/Packet: ৳8<br>
+      <strong>Carton Price: ৳2,304</strong>
+    </p>
+
+    <button class="add-cart" data-add="3">
+      🛒 Add 1 Carton
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- 4 -->
+<article class="product-card">
+
+  <div class="photo">
+    <img src="IMG-20260830-WA0028.jpg"
+         alt="JHAL MURI">
+  </div>
+
+  <div class="info">
+
+    <span>PRAN</span>
+
+    <h3>JHAL MURI</h3>
+
+    <p class="prices">
+      MRP/Packet: ৳10<br>
+      TP/Packet: ৳8<br>
+      <strong>Carton Price: ৳1,160</strong>
+    </p>
+
+    <button class="add-cart" data-add="4">
+      🛒 Add 1 Carton
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- 5 -->
+<article class="product-card">
+
+  <div class="photo">
+    <img src="IMG-20260830-WA0029.jpg"
+         alt="JHAL CHANACHUR">
+  </div>
+
+  <div class="info">
+
+    <span>PRAN</span>
+
+    <h3>JHAL CHANACHUR</h3>
+
+    <p class="prices">
+      MRP/Packet: ৳50<br>
+      TP/Packet: ৳38<br>
+      <strong>Carton Price: ৳3,800</strong>
+    </p>
+
+    <button class="add-cart" data-add="5">
+      🛒 Add 1 Carton
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- 6 -->
+<article class="product-card">
+
+  <div class="photo">
+    <img src="IMG-20260830-WA0030.jpg"
+         alt="PRAN DAL BAJA">
+  </div>
+
+  <div class="info">
+
+    <span>PRAN</span>
+
+    <h3>PRAN DAL BAJA</h3>
+
+    <p class="prices">
+      MRP/Packet: ৳10<br>
+      TP/Packet: ৳8<br>
+      <strong>Carton Price: ৳1,600</strong>
+    </p>
+
+    <button class="add-cart" data-add="6">
+      🛒 Add 1 Carton
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- 7 -->
+<article class="product-card">
+
+  <div class="photo">
+    <img src="IMG-20260830-WA0031.jpg"
+         alt="ZEROS CHIPS">
+  </div>
+
+  <div class="info">
+
+    <span>PRAN</span>
+
+    <h3>ZEROS CHIPS</h3>
+
+    <p class="prices">
+      MRP/Packet: ৳10<br>
+      TP/Packet: ৳8<br>
+      <strong>Carton Price: ৳960</strong>
+    </p>
+
+    <button class="add-cart" data-add="7">
+      🛒 Add 1 Carton
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- 8 -->
+<article class="product-card">
+
+  <div class="photo">
+    <img src="IMG-20260830-WA0032.jpg"
+         alt="POTATO STICKS CHIPS">
+  </div>
+
+  <div class="info">
+
+    <span>PRAN</span>
+
+    <h3>POTATO STICKS CHIPS</h3>
+
+    <p class="prices">
+      MRP/Packet: ৳10<br>
+      TP/Packet: ৳8<br>
+      <strong>Carton Price: ৳960</strong>
+    </p>
+
+    <button class="add-cart" data-add="8">
+      🛒 Add 1 Carton
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- 9 -->
+<article class="product-card">
+
+  <div class="photo">
+    <img src="IMG-20260830-WA0033.jpg"
+         alt="HIP HIP CHIPS">
+  </div>
+
+  <div class="info">
+
+    <span>PRAN</span>
+
+    <h3>HIP HIP CHIPS</h3>
+
+    <p class="prices">
+      MRP/Packet: ৳10<br>
+      TP/Packet: ৳8<br>
+      <strong>Carton Price: ৳1,600</strong>
+    </p>
+
+    <button class="add-cart" data-add="9">
+      🛒 Add 1 Carton
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- 10 -->
+<article class="product-card">
+
+  <div class="photo">
+    <img src="IMG-20260830-WA0034.jpg"
+         alt="TWISTER RED CHIPS">
+  </div>
+
+  <div class="info">
+
+    <span>PRAN</span>
+
+    <h3>TWISTER RED CHIPS</h3>
+
+    <p class="prices">
+      MRP/Packet: ৳20<br>
+      TP/Packet: ৳16<br>
+      <strong>Carton Price: ৳1,280</strong>
+    </p>
+
+    <button class="add-cart" data-add="10">
+      🛒 Add 1 Carton
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- 11 -->
+<article class="product-card">
+
+  <div class="photo">
+    <img src="IMG-20260830-WA0035.jpg"
+         alt="CHICKEN BITE CHIPS">
+  </div>
+
+  <div class="info">
+
+    <span>PRAN</span>
+
+    <h3>CHICKEN BITE CHIPS</h3>
+
+    <p class="prices">
+      MRP/Packet: ৳10<br>
+      TP/Packet: ৳7.60<br>
+      <strong>Carton Price: ৳912</strong>
+    </p>
+
+    <button class="add-cart" data-add="11">
+      🛒 Add 1 Carton
+    </button>
+
+  </div>
+
+</article>
+
+
+<!-- 12 -->
+<article class="product-card">
+
+  <div class="photo">
+    <img src="IMG-20260830-WA0036.jpg"
+         alt="TWISTER BLUE CHIPS">
+  </div>
+
+  <div class="info">
+
+    <span>PRAN</span>
+
+    <h3>TWISTER BLUE CHIPS</h3>
+
+    <p class="prices">
+      MRP/Packet: ৳20<br>
+      TP/Packet: ৳16<br>
+      <strong>Carton Price: ৳1,280</strong>
+    </p>
+
+    <button class="add-cart" data-add="12">
+      🛒 Add 1 Carton
+    </button>
+
+  </div>
+
+</article>
+
+
+</div>
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <strong>PAUL DISTRIBUTION</strong><br>
+
+  Masukbazar, Kamalbazar, Sylhet
+
+</footer>
+
+
+<!-- CART BUTTON -->
+
+<button
+  class="cart-fab"
+  id="cartFab"
+  type="button">
+
+  🛒 Cart
+
+  <span
+    class="cart-count"
+    id="cartCount">
+    0
+  </span>
+
+</button>
+
+
+<!-- CART PANEL -->
+
+<div
+  class="cart-panel"
+  id="cartPanel">
+
+  <div class="cart-head">
+
+    <h2>Your Cart</h2>
+
+    <button
+      class="cart-close"
+      id="cartClose"
+      type="button">
+      ✕
+    </button>
+
+  </div>
+
+
+  <div id="cartItems">
+
+    <div class="empty-cart">
+      Cart is empty
+    </div>
+
+  </div>
+
+
+  <div class="cart-total">
+
+    <span>
+      Grand Total
+    </span>
+
+    <span id="cartTotal">
+      ৳0
+    </span>
+
+  </div>
+
+
+  <!-- PLACE ORDER -->
+
+  <button
+    class="place-order-btn"
+    id="placeOrderBtn"
+    type="button">
+
+    📦 Place Order
+
+  </button>
+
+</div>
+
+
+<!-- =========================
+     ORDER POPUP
+========================= -->
+
+<div
+  class="order-overlay"
+  id="orderOverlay">
+
+  <div class="order-box">
+
+
+    <div class="order-top">
+
+      <h2>
+        📦 Place Order
+      </h2>
+
+      <button
+        class="order-x"
+        id="orderClose"
+        type="button">
+
+        ✕
+
+      </button>
+
+    </div>
+
+
+    <!-- CUSTOMER NAME -->
+
+    <div class="order-field">
+
+      <label>
+        Customer Name
+      </label>
+
+      <input
+        type="text"
+        id="customerName"
+        placeholder="Your name">
+
+    </div>
+
+
+    <!-- SHOP NAME -->
+
+    <div class="order-field">
+
+      <label>
+        Shop Name
+      </label>
+
+      <input
+        type="text"
+        id="shopName"
+        placeholder="Shop name">
+
+    </div>
+
+
+    <!-- MOBILE -->
+
+    <div class="order-field">
+
+      <label>
+        Mobile Number
+      </label>
+
+      <input
+        type="tel"
+        id="mobileNumber"
+        placeholder="01XXXXXXXXX">
+
+    </div>
+
+
+    <!-- ADDRESS -->
+
+    <div class="order-field">
+
+      <label>
+        Delivery Address
+      </label>
+
+      <textarea
+        id="deliveryAddress"
+        placeholder="Delivery address"></textarea>
+
+    </div>
+
+
+    <!-- ORDER SUMMARY -->
+
+    <div class="order-summary">
+
+      <h3>
+        Order Summary
+      </h3>
+
+      <div id="orderSummary"></div>
+
+
+      <div class="summary-total">
+
+        <span>
+          Grand Total
+        </span>
+
+        <span id="orderGrandTotal">
+          ৳0
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- WHATSAPP -->
+
+    <div class="whatsapp-title">
+
+      Send Order via WhatsApp
+
+    </div>
+
+
+    <button
+      class="whatsapp-btn"
+      type="button"
+      onclick="sendWhatsApp('8801850300657')">
+
+      🟢 WhatsApp 1
+
+    </button>
+
+
+    <button
+      class="whatsapp-btn"
+      type="button"
+      onclick="sendWhatsApp('8801775495085')">
+
+      🟢 WhatsApp 2
+
+    </button>
+
+
+    <button
+      class="whatsapp-btn"
+      type="button"
+      onclick="sendWhatsApp('8801772954542')">
+
+      🟢 WhatsApp 3
+
+    </button>
+
+
+    <button
+      class="order-cancel"
+      type="button"
+      onclick="closeOrder()">
+
+      Cancel
+
+    </button>
+
+
+  </div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   PRODUCT DATA
+========================= */
+
+const products = [
+
+  ["MUGHAL LACCI",408,
+   "IMG-20260830-WA0024.jpg"],
+
+  ["POTATO CRACKER – TOMATO FLAVOUR",912,
+   "IMG-20260830-WA0025.jpg"],
+
+  ["PRAN BADAM BAJA",2304,
+   "IMG-20260830-WA0027.jpg"],
+
+  ["JHAL MURI",1160,
+   "IMG-20260830-WA0028.jpg"],
+
+  ["JHAL CHANACHUR",3800,
+   "IMG-20260830-WA0029.jpg"],
+
+  ["PRAN DAL BAJA",1600,
+   "IMG-20260830-WA0030.jpg"],
+
+  ["ZEROS CHIPS",960,
+   "IMG-20260830-WA0031.jpg"],
+
+  ["POTATO STICKS CHIPS",960,
+   "IMG-20260830-WA0032.jpg"],
+
+  ["HIP HIP CHIPS",1600,
+   "IMG-20260830-WA0033.jpg"],
+
+  ["TWISTER RED CHIPS",1280,
+   "IMG-20260830-WA0034.jpg"],
+
+  ["CHICKEN BITE CHIPS",912,
+   "IMG-20260830-WA0035.jpg"],
+
+  ["TWISTER BLUE CHIPS",1280,
+   "IMG-20260830-WA0036.jpg"]
+
+];
+
+
+/* =========================
+   CART
+========================= */
+
+const cart = [];
+
+
+const panel =
+  document.getElementById("cartPanel");
+
+const items =
+  document.getElementById("cartItems");
+
+const count =
+  document.getElementById("cartCount");
+
+const total =
+  document.getElementById("cartTotal");
+
+
+/* =========================
+   MONEY
+========================= */
+
+function money(number){
+
+  number = Number(number);
+
+  if(!Number.isFinite(number)){
+    number = 0;
+  }
+
+  return "৳" +
+    number.toLocaleString("en-BD",{
+      minimumFractionDigits:0,
+      maximumFractionDigits:2
+    });
+
+}
+
+
+/* =========================
+   RENDER CART
+========================= */
+
+function renderCart(){
+
+  let totalCartons = 0;
+
+  let grandTotal = 0;
+
+
+  cart.forEach(function(item){
+
+    totalCartons +=
+      Number(item.qty);
+
+    grandTotal +=
+      Number(item.price) *
+      Number(item.qty);
+
+  });
+
+
+  count.textContent =
+    totalCartons;
+
+
+  total.textContent =
+    money(grandTotal);
+
+
+  if(cart.length === 0){
+
+    items.innerHTML =
+      '<div class="empty-cart">Cart is empty</div>';
+
+    return;
+
+  }
+
+
+  items.innerHTML =
+    cart.map(function(item,index){
+
+      const lineTotal =
+        Number(item.price) *
+        Number(item.qty);
+
+
+      return `
+
+        <div class="cart-item">
+
+          <div class="cart-row">
+
+            <div>
+
+              <div class="cart-name">
+                ${item.name}
+              </div>
+
+              <div class="cart-price">
+
+                ${money(item.price)}
+                × ${item.qty} Carton
+
+              </div>
+
+            </div>
+
+
+            <div class="line-total">
+
+              ${money(lineTotal)}
+
+            </div>
+
+          </div>
+
+
+          <div class="qty">
+
+            <button
+              type="button"
+              onclick="changeQty(${index},-1)">
+
+              −
+
+            </button>
+
+
+            <b>
+              ${item.qty}
+            </b>
+
+
+            <button
+              type="button"
+              onclick="changeQty(${index},1)">
+
+              +
+
+            </button>
+
+          </div>
+
+        </div>
+
+      `;
+
+    }).join("");
+
+}
+
+
+/* =========================
+   ADD CART
+========================= */
+
+function addCart(id){
+
+  const product =
+    products[id - 1];
+
+
+  if(!product){
+    return;
+  }
+
+
+  const existing =
+    cart.findIndex(function(item){
+
+      return item.id === id;
+
+    });
+
+
+  if(existing === -1){
+
+    cart.push({
+
+      id:id,
+
+      name:product[0],
+
+      price:Number(product[1]),
+
+      img:product[2],
+
+      qty:1
+
+    });
+
+  }
+
+  else{
+
+    cart[existing].qty++;
+
+  }
+
+
+  renderCart();
+
+
+  panel.classList.add("open");
+
+}
+
+
+/* =========================
+   CHANGE QUANTITY
+========================= */
+
+function changeQty(index,direction){
+
+  if(!cart[index]){
+    return;
+  }
+
+
+  cart[index].qty +=
+    direction;
+
+
+  if(cart[index].qty <= 0){
+
+    cart.splice(index,1);
+
+  }
+
+
+  renderCart();
+
+}
+
+
+/* =========================
+   ADD BUTTONS
+========================= */
+
+document
+  .querySelectorAll(".add-cart")
+  .forEach(function(button){
+
+    button.addEventListener(
+      "click",
+      function(){
+
+        const id =
+          Number(this.dataset.add);
+
+        addCart(id);
+
+      }
+    );
+
+  });
+
+
+/* =========================
+   CART OPEN / CLOSE
+========================= */
+
+document
+  .getElementById("cartFab")
+  .addEventListener(
+    "click",
+    function(){
+
+      panel.classList.toggle("open");
+
+    }
+  );
+
+
+document
+  .getElementById("cartClose")
+  .addEventListener(
+    "click",
+    function(){
+
+      panel.classList.remove("open");
+
+    }
+  );
+
+
+/* =========================
+   ORDER SYSTEM
+========================= */
+
+const orderOverlay =
+  document.getElementById("orderOverlay");
+
+const placeOrderBtn =
+  document.getElementById("placeOrderBtn");
+
+const orderClose =
+  document.getElementById("orderClose");
+
+
+/* OPEN ORDER */
+
+placeOrderBtn.addEventListener(
+  "click",
+  function(){
+
+    if(cart.length === 0){
+
+      alert(
+        "Please add products to your cart first."
+      );
+
+      return;
+
+    }
+
+
+    renderOrderSummary();
+
+    orderOverlay.classList.add("open");
+
+  }
+);
+
+
+/* CLOSE */
+
+orderClose.addEventListener(
+  "click",
+  closeOrder
+);
+
+
+function closeOrder(){
+
+  orderOverlay.classList.remove("open");
+
+}
+
+
+/* =========================
+   ORDER SUMMARY
+========================= */
+
+function renderOrderSummary(){
+
+  const summary =
+    document.getElementById("orderSummary");
+
+  const grandTotal =
+    document.getElementById("orderGrandTotal");
+
+
+  let totalAmount = 0;
+
+
+  summary.innerHTML =
+    cart.map(function(item,index){
+
+      const lineTotal =
+        Number(item.price) *
+        Number(item.qty);
+
+
+      totalAmount +=
+        lineTotal;
+
+
+      return `
+
+        <div class="summary-product">
+
+          <strong>
+
+            ${String(index + 1).padStart(2,"0")}.
+            ${item.name}
+
+          </strong>
+
+          <br>
+
+          ${item.qty} Carton ×
+          ${money(item.price)}
+          =
+          <strong>
+            ${money(lineTotal)}
+          </strong>
+
+        </div>
+
+      `;
+
+    }).join("");
+
+
+  grandTotal.textContent =
+    money(totalAmount);
+
+}
+
+
+/* =========================
+   WHATSAPP ORDER
+========================= */
+
+function sendWhatsApp(number){
+
+  const customer =
+    document
+      .getElementById("customerName")
+      .value
+      .trim();
+
+
+  const shop =
+    document
+      .getElementById("shopName")
+      .value
+      .trim();
+
+
+  const mobile =
+    document
+      .getElementById("mobileNumber")
+      .value
+      .trim();
+
+
+  const address =
+    document
+      .getElementById("deliveryAddress")
+      .value
+      .trim();
+
+
+  if(
+    !customer ||
+    !shop ||
+    !mobile ||
+    !address
+  ){
+
+    alert(
+      "Please fill in all customer information."
+    );
+
+    return;
+
+  }
+
+
+  let totalAmount = 0;
+
+  let totalCartons = 0;
+
+
+  let message =
+`🛒 PAUL DISTRIBUTION
+New Product Order
+
+Shop Name: ${shop}
+Customer Name: ${customer}
+Mobile: ${mobile}
+Address: ${address}
+
+ORDER DETAILS
+━━━━━━━━━━━━━━━━
+`;
+
+
+  cart.forEach(function(item,index){
+
+    const lineTotal =
+      Number(item.price) *
+      Number(item.qty);
+
+
+    totalAmount +=
+      lineTotal;
+
+
+    totalCartons +=
+      Number(item.qty);
+
+
+    message +=
+`${String(index + 1).padStart(2,"0")}. ${item.name}
+    ${item.qty} Carton × ${money(item.price)} = ${money(lineTotal)}
+
+`;
+
+  });
+
+
+  message +=
+`━━━━━━━━━━━━━━━━
+TOTAL CARTON: ${totalCartons}
+GRAND TOTAL: ${money(totalAmount)}
+
+Please confirm this order.
+Thank you.
+— PAUL DISTRIBUTION`;
+
+
+  const whatsappURL =
+    "https://wa.me/" +
+    number +
+    "?text=" +
+    encodeURIComponent(message);
+
+
+  window.open(
+    whatsappURL,
+    "_blank"
+  );
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+renderCart();
+
+</script>
+
+</body>
+</html>}
+
+.nav{
+  width:min(1120px,92%);
+  margin:auto;
+  min-height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  height:52px;
+}
+
+.back{
+  background:var(--y);
+  color:#111;
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:900;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  background:var(--ink);
+  color:#fff;
+  text-align:center;
+  padding:55px 20px 65px;
+}
+
+.eyebrow{
+  color:var(--y);
+  font-weight:900;
+  letter-spacing:2px;
+  font-size:12px;
+}
+
+h1{
+  font-size:clamp(40px,7vw,64px);
+  margin:10px 0 5px;
+}
+
+.hero p{
+  color:#cdd0d5;
+}
+
+/* PRODUCTS */
+main{
+  width:min(1120px,92%);
+  margin:auto;
+  padding:55px 0 100px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.product-card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:19px;
+  overflow:hidden;
+  box-shadow:0 8px 26px rgba(0,0,0,.05);
+  transition:.3s;
+}
+
+.product-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(0,0,0,.1);
+}
+
+.photo{
+  height:220px;
+  background:#f3f3ef;
+  padding:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  border-radius:10px;
+}
+
+.info{
+  padding:16px;
+}
+
+.info span{
+  font-size:11px;
+  color:#b18b00;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.info h3{
+  font-size:17px;
+  margin:5px 0;
+  min-height:42px;
+}
+
+.prices{
+  line-height:1.7;
+  color:var(--muted);
+  font-size:14px;
+  margin:8px 0 12px;
+}
+
+.prices strong{
+  color:var(--ink);
+}
+
+.add-cart{
+  width:100%;
+  padding:12px;
+  border:0;
+  border-radius:10px;
+  background:var(--ink);
+  color:white;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.add-cart:hover{
+  background:var(--y);
+  color:#111;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  background:#0b0c0f;
+  color:#aaa;
+  padding:28px;
+}
+
+/* CART BUTTON */
+.cart-fab{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:9999;
+  border:0;
+  border-radius:999px;
+  padding:14px 20px;
+  background:var(--y);
+  color:#111;
+  font-weight:900;
+  font-size:16px;
+  box-shadow:0 12px 30px rgba(0,0,0,.25);
+  cursor:pointer;
+}
+
+.cart-count{
+  display:inline-flex;
+  min-width:24px;
+  height:24px;
+  align-items:center;
+  justify-content:center;
+  background:#111;
+  color:#fff;
+  border-radius:50%;
+  margin-left:7px;
+}
+
+/* CART PANEL */
+.cart-panel{
+  position:fixed;
+  right:18px;
+  bottom:78px;
+  width:min(420px,calc(100vw - 36px));
+  max-height:72vh;
+  overflow:auto;
+  background:#fff;
+  border-radius:20px;
+  padding:18px;
+  box-shadow:0 20px 60px rgba(0,0,0,.28);
+  z-index:9998;
+  display:none;
+  border:1px solid #eee;
+}
+
+.cart-panel.open{
+  display:block;
+}
+
+.cart-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.cart-head h2{
+  font-size:25px;
+}
+
+.cart-close{
+  border:0;
+  background:#eee;
+  border-radius:8px;
+  padding:8px 11px;
+  cursor:pointer;
+}
+
+/* CART ITEM */
+.cart-item{
+  padding:14px 0;
+  border-bottom:1px solid #eee;
+}
+
+.cart-row{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:center;
+}
+
+.cart-name{
+  font-weight:900;
+  font-size:14px;
+}
+
+.cart-price{
+  margin-top:5px;
+  color:#555;
+  font-size:14px;
+}
+
+.line-total{
+  font-weight:900;
+  font-size:16px;
+  white-space:nowrap;
+}
+
+.qty{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:10px;
+}
+
+.qty button{
+  width:32px;
+  height:32px;
+  border:0;
+  border-radius:8px;
+  background:#111;
+  color:#fff;
+  font-size:18px;
+  cursor:pointer;
+}
+
+.qty b{
+  min-width:20px;
+  text-align:center;
+}
+
+.cart-total{
+  display:flex;
+  justify-content:space-between;
+  font-weight:900;
+  font-size:20px;
+  padding:18px 0 4px;
+}
+
+.empty-cart{
+  text-align:center;
+  color:#777;
+  padding:24px;
+}
+
 /* MOBILE */
 @media(max-width:800px){
   .grid{
